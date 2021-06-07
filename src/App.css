@@ -1,38 +1,130 @@
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f3f3f3;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-form-title h2 {
+  font-size: 20px;
+  font-weight: 900;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container-form-title p {
+  font-size: 12px;
+  font-weight: 600;
+  color: #585858;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#msg-error {
+  color: #d41c1c;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.btn-confirm,
+.input-email-form {
+  width: 100%;
+  height: 35px;
+  border-radius: 2px;
+}
+
+.btn-confirm {
+  border: none;
+  color: #fff;
+  background-color: #3753d3;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.input-password-form {
+  border: none;
+  border-bottom: 1px solid #888888;
+  padding: 5px;
+  outline: 0;
+  background-color: transparent;
+}
+
+.input-password-form::placeholder {
+  padding-left: 5px;
+}
+
+.container-form-title,
+.container-form-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-form-title {
+  height: auto;
+  justify-content: center;
+}
+
+.container-form-input {
+  height: 60%;
+  justify-content: space-evenly;
+}
+
+form {
+  width: 250px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  padding: 0 10px;
+  border-radius: 2px;
+  z-index: 10;
 }
 
-.App-link {
-  color: #61dafb;
+.container-form {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.background-top {
+  background-image: url("password.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 300px;
+  height: 250px;
+}
+
+@media only screen and (min-width: 375px) {
+  form {
+    width: 300px;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media only screen and (min-width: 768px) {
+  .btn-confirm,
+  .input-email-form {
+    width: 100%;
+  }
+
+  form {
+    width: 300px;
+  }
+
+  .container-form-title h2 {
+    font-size: 22px;
+  }
+
+  .container-form-title p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .background-top {
+    width: 400px;
+    height: 350px;
   }
 }
